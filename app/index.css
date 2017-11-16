@@ -1,3 +1,22 @@
 body{
-background:rgb(233, 19, 233);
+font-family: -apple-system, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+ul {
+    padding:0;
+}
+
+li{
+    list-style-type: none;
+    padding: 0px 5px
+}
+
+.container{
+    max-width:960px;
+    margin: 0 auto;
+}
+
+.languages{
+    display: flex;
+    justify-content: center;
 }
