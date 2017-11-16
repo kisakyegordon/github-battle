@@ -46,29 +46,12 @@ class Popular extends Component{
     }
 
     render(){
-        // var languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python'];
         return (
-
             <SelectLanguage 
             selectedLanguage={this.state.selectedLanguage}
             onClick={this.updateLanguage}
             />
-        //     <div>
-        //     <ul className='languages'>
-        //     {languages.map(function (lang){
-        //         return (
-        //             <li key={lang}
-        //             style={lang === this.state.selectedLanguage? {color:'red'}: null}
-        //             onClick={this.updateLanguage.bind(null, lang)}
-        //             > 
-        //             {lang} </li>
-        //         )
-        //     }, this)
-        // }
-        // </ul>
-        // </div>
-        )
-        
+        )   
     }
 }
 
