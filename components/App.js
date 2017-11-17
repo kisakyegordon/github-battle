@@ -4,6 +4,7 @@ import ReactRouter from 'react-router-dom';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import Home from './Home';
 import Battle from './Battle';
+import Results from './Results';
 
 // var Router = ReactRouter.BrowserRouter;
 // var Route = ReactRouter.Route;
@@ -19,6 +20,7 @@ class App extends Component{
                 <Switch>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/battle' component={Battle} />
+                <Route  path='/battle/results' component={Results} />
                 <Route path='/popular' component={Popular} />
                 <Route render={function (){
                     return <h4> 404 - Page Not Found </h4>
