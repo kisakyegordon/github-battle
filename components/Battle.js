@@ -175,15 +175,20 @@ class Battle extends Component{
                 </div>
 
                 {playerOneImage && playerTwoImage &&
-                <p>l</p>
-            //         <Link
-            //           className='button'
-            //           to={{
-            //             pathname: match.url + '/results',
-            //             search: '?playerOneName=' + playerOneName + '&playerTwoName=' + playerTwoName
-            //           }}>
-            //             Battle
-            // </Link>
+
+                    <button
+                    className='button'
+                    >
+                        
+                         Battle </button>
+                    // <Link
+                    //   className='button'
+                    //   to={{
+                    //     pathname: match.url + '/results',
+                    //     search: '?playerOneName=' + playerOneName + '&playerTwoName=' + playerTwoName
+                    //   }}>
+                    //     Battle
+                    // </Link>
         }
                 </div>
 
