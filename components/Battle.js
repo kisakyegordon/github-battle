@@ -1,35 +1,37 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+// var Link = require ('react-router-dom').Link;
 import {Link} from 'react-router-dom';
+import { NavLink }  from 'react-router-dom';
+import PlayerPreview from './PlayerPreview';
 
+// function PlayerPreview(props){
+//     return (
+//         <div>
+//             <div className='column'>
+//             <img 
+//             className='avatar'
+//             src={props.avatar}
+//             alt={'Avatar for' + props.username}
+//             />
+//             <h2 className='username'> @{props.username} </h2>
 
-function PlayerPreview(props){
-    return (
-        <div>
-            <div className='column'>
-            <img 
-            className='avatar'
-            src={props.avatar}
-            alt={'Avatar for' + props.username}
-            />
-            <h2 className='username'> @{props.username} </h2>
+//             <button
+//             className='reset'
+//             onClick={props.onReset.bind(null, props.id)}>
+//             Reset
+//             </button>
+//             </div>
+//         </div>
+//     )
+// }
 
-            <button
-            className='reset'
-            onClick={props.onReset.bind(null, props.id)}>
-            Reset
-            </button>
-            </div>
-        </div>
-    )
-}
-
-PlayerPreview.propTypes = {
-    avatar: PropTypes.string.isRequired,
-    username: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired,
-    onReset:PropTypes.func.isRequired
-}
+// PlayerPreview.propTypes = {
+//     avatar: PropTypes.string.isRequired,
+//     username: PropTypes.string.isRequired,
+//     id: PropTypes.string.isRequired,
+//     onReset:PropTypes.func.isRequired
+// }
 
 
 class PlayerInput extends Component{
@@ -148,12 +150,19 @@ class Battle extends Component{
                 /> : null}
 
                 {playerOneImage !== null &&
+                
                 <PlayerPreview 
-                id='playerOne'
                 avatar={playerOneImage}
                 username={playerOneName}
-                onReset = {this.handleReset}
-                />
+                onReset = {this.handleReset}>
+
+                <button
+                className='reset'
+                onClick={this.handleReset.bind(null, 'playerOne')}>
+                Reset
+                </button> 
+
+                </PlayerPreview>
                 }
 
                 {!playerTwoName &&
@@ -165,31 +174,34 @@ class Battle extends Component{
 
                 {playerTwoImage !== null &&
                 <PlayerPreview
-                id='playerTwo'
                 avatar={playerTwoImage}
-                username={playerTwoName}
-                onReset = {this.handleReset}
-                />
+                username={playerTwoName}>
+
+                <button
+                className='reset'
+                onClick={this.handleReset.bind(null, 'playerTwo')}>
+                Reset
+                </button> 
+
+                </PlayerPreview>
                 }
 
                 </div>
 
                 {playerOneImage && playerTwoImage &&
 
-                    <button
+                    // <button className='button'> Battle </button>
+                    <div>
+                    <NavLink
                     className='button'
-                    >
-                        
-                         Battle </button>
-                    // <Link
-                    //   className='button'
-                    //   to={{
-                    //     pathname: match.url + '/results',
-                    //     search: '?playerOneName=' + playerOneName + '&playerTwoName=' + playerTwoName
-                    //   }}>
-                    //     Battle
-                    // </Link>
-        }
+                    to={{
+                        pathname: '/battle/results',
+                        search: '?playerOneName=' + playerOneName + '&playerTwoName=' + playerTwoName
+                    }}>
+                        Battle
+                    </NavLink>
+                    </div>
+                }
                 </div>
 
 
