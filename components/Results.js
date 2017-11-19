@@ -129,6 +129,8 @@ class Results extends Component{
              />
 
             </div>
+            <NavLink className='button' to='/battle'> Reset </NavLink>
+
             </div>
         )
 
