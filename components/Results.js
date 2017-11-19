@@ -7,6 +7,7 @@ import PlayerPreview from './PlayerPreview';
 import Loading from './Loading';
 
 
+
 function Profile(props){
     var info = props.info;
     return (
@@ -130,7 +131,6 @@ class Results extends Component{
 
             </div>
             <NavLink className='button' to='/battle'> Reset </NavLink>
-
             </div>
         )
 
