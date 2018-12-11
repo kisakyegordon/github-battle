@@ -5,7 +5,7 @@ function PlayerPreview(props){
     return (
         <div>
             <div className='column'>
-            <img 
+            <img
             className='avatar'
             src={props.avatar}
             alt={'Avatar for' + props.username}
@@ -22,8 +22,6 @@ function PlayerPreview(props){
 PlayerPreview.propTypes = {
     avatar: PropTypes.string.isRequired,
     username: PropTypes.string.isRequired,
-    // id: PropTypes.string.isRequired
-    // onReset:PropTypes.func.isRequired
 }
 
 export default PlayerPreview;
