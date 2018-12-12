@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --open",
     "test": "node ./node_modules/jest-cli/bin/jest.js",
     "jest": "node ./node_modules/jest-cli/bin/jest.js",
-    "postinstall": "cd client && npm install",
+    // "postinstall": "cd client && npm install",
     "build": "node node_modules/webpack/bin/webpack.js --display-error-details"
 
   },
