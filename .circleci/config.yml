@@ -26,10 +26,12 @@ jobs:
             npm test -- --coverage
             ./cc-test-reporter after-build --exit-code $?
   deploy:
-    staging:
-      branch: master
-      heroku:
-        appname: githubattle
+    steps:
+      - checkout
+      - run:
+          name: Deploy Master to Heroku
+          command: |
+            git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_APP_NAME.git master
 
 # version: 2
 # jobs:
