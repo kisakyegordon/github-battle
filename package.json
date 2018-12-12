@@ -6,7 +6,9 @@
   "scripts": {
     "start": "webpack-dev-server --open",
     "test": "node ./node_modules/jest-cli/bin/jest.js",
-    "jest": "node ./node_modules/jest-cli/bin/jest.js"
+    "jest": "node ./node_modules/jest-cli/bin/jest.js",
+    "heroku-postbuild": "webpack -p"
+
   },
   "babel": {
     "presets": [
