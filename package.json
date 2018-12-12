@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "./node_modules/.bin/serve -l tcp://0.0.0.0:$PORT -s dist/",
+    "start": "./node_modules/.bin/serve -l tcp://0.0.0.0:3000 -s dist/",
     "test": "node ./node_modules/jest-cli/bin/jest.js",
     "jest": "node ./node_modules/jest-cli/bin/jest.js",
     "build": "node ./node_modules/.bin/webpack --config ./webpack.config.js --progress --profile --colors"
