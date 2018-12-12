@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "heroku-prebuild": "set NPM_CONFIG_PRODUCTION=false",
-    "start": "heroku-prebuild webpack-dev-server --open",
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js webpack-dev-server --open",
     "test": "node ./node_modules/jest-cli/bin/jest.js",
     "jest": "node ./node_modules/jest-cli/bin/jest.js"
 
