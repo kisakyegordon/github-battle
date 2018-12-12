@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --host 0.0.0.0",
+    "start": "./node_modules/.bin/serve -s dist/",
     "test": "node ./node_modules/jest-cli/bin/jest.js",
     "jest": "node ./node_modules/jest-cli/bin/jest.js",
-    "build": "node node_modules/webpack/bin/webpack.js --display-error-details"
+    "build": "node ./node_modules/.bin/webpack --config ./webpack.config.js --progress --profile --colors"
   },
   "babel": {
     "presets": [
@@ -29,6 +29,8 @@
     "react-dom": "^16.1.1",
     "react-router-dom": "^4.2.2",
     "react-testing-library": "^5.3.2",
+    "serve": "8",
+    "webpack-cli": "^3.1.2",
     "webpack-dev-server": "3.1.10"
   },
   "devDependencies": {
