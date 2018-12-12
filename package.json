@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open",
-    "test": "node ./node_modules/jest-cli/bin/jest.js",
-    "jest": "node ./node_modules/jest-cli/bin/jest.js",
-    "heroku-postbuild": "webpack -p"
-
+    "dev": "react-scripts start",
+    "start": "serve -l $PORT -s dist",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "prod": "NODE_ENV=production serve -s dist",
+    "postinstall": "webpack -p"
   },
   "babel": {
     "presets": [
@@ -29,7 +31,11 @@
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-router-dom": "^4.2.2",
-    "react-testing-library": "^5.3.2"
+    "react-scripts": "^2.1.1",
+    "react-testing-library": "^5.3.2",
+    "serve": "8",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "3.1.10"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -40,6 +46,6 @@
     "html-webpack-plugin": "^2.30.1",
     "style-loader": "^0.19.0",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.4"
+    "webpack-dev-server": "^3.1.10"
   }
 }
