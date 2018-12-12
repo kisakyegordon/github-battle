@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open",
+    "heroku-prebuild": "set NPM_CONFIG_PRODUCTION=false",
+    "start": "heroku-prebuild webpack-dev-server --open",
     "test": "node ./node_modules/jest-cli/bin/jest.js",
-    "jest": "node ./node_modules/jest-cli/bin/jest.js",
-    "heroku-prebuild": "npm install --dev"
+    "jest": "node ./node_modules/jest-cli/bin/jest.js"
+
   },
   "babel": {
     "presets": [
