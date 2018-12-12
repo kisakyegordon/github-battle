@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "react-scripts start",
-    "start": "serve -s dist",
+    "start": "serve -l $PORT -s dist",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
