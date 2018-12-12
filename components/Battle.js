@@ -5,39 +5,10 @@ import {Link} from 'react-router-dom';
 import { NavLink }  from 'react-router-dom';
 import PlayerPreview from './PlayerPreview';
 
-// function PlayerPreview(props){
-//     return (
-//         <div>
-//             <div className='column'>
-//             <img 
-//             className='avatar'
-//             src={props.avatar}
-//             alt={'Avatar for' + props.username}
-//             />
-//             <h2 className='username'> @{props.username} </h2>
-
-//             <button
-//             className='reset'
-//             onClick={props.onReset.bind(null, props.id)}>
-//             Reset
-//             </button>
-//             </div>
-//         </div>
-//     )
-// }
-
-// PlayerPreview.propTypes = {
-//     avatar: PropTypes.string.isRequired,
-//     username: PropTypes.string.isRequired,
-//     id: PropTypes.string.isRequired,
-//     onReset:PropTypes.func.isRequired
-// }
-
-
 class PlayerInput extends Component{
     constructor(props){
         super(props);
-    
+
         this.state = {
             username: ''
         };
@@ -68,7 +39,7 @@ class PlayerInput extends Component{
             <label className='header' htmlFor='username'>
                 {this.props.label}
             </label>
-            <input 
+            <input
             id='username'
             placeholder='github username'
             type='text'
@@ -77,7 +48,7 @@ class PlayerInput extends Component{
             onChange={this.handleChange}
             />
 
-            <button 
+            <button
             className='button'
             type='submit'
             disabled={!this.state.username}>
@@ -115,8 +86,8 @@ class Battle extends Component{
             newState[id + 'Name'] = username;
             newState[id + 'Image'] = 'https://github.com/' + username + '.png?size=200';
             return newState;
-        
-        });  
+
+        });
         }
 
     handleReset(id){
@@ -127,7 +98,7 @@ class Battle extends Component{
             newState[id + 'Image'] = null;
 
             return newState;
-        }); 
+        });
     }
 
 
@@ -141,17 +112,17 @@ class Battle extends Component{
             <div>
             <div className='row'>
                 <h3> Battle Page </h3>
-                
+
                 {!playerOneName?
-                <PlayerInput 
+                <PlayerInput
                 id='playerOne'
                 label='Player One'
                 onSubmit={this.handleSubmit}
                 /> : null}
 
                 {playerOneImage !== null &&
-                
-                <PlayerPreview 
+
+                <PlayerPreview
                 avatar={playerOneImage}
                 username={playerOneName}
                 onReset = {this.handleReset}>
@@ -160,13 +131,13 @@ class Battle extends Component{
                 className='reset'
                 onClick={this.handleReset.bind(null, 'playerOne')}>
                 Reset
-                </button> 
+                </button>
 
                 </PlayerPreview>
                 }
 
                 {!playerTwoName &&
-                <PlayerInput 
+                <PlayerInput
                 id='playerTwo'
                 label='Player Two'
                 onSubmit={this.handleSubmit}
@@ -181,7 +152,7 @@ class Battle extends Component{
                 className='reset'
                 onClick={this.handleReset.bind(null, 'playerTwo')}>
                 Reset
-                </button> 
+                </button>
 
                 </PlayerPreview>
                 }
