@@ -25,7 +25,11 @@ jobs:
             ./cc-test-reporter before-build
             npm test -- --coverage
             ./cc-test-reporter after-build --exit-code $?
-
+  deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: githubattle
 
 # version: 2
 # jobs:
