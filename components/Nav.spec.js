@@ -10,4 +10,8 @@ describe("Test Results Component", () => {
         const wrapper = shallow(<Nav />);
         expect(wrapper).toMatchSnapshot();
     })
+    it("tests for component classNames", () => {
+        const wrapper = shallow(<Nav />);
+        expect(wrapper.find('ul').hasClass('nav')).toBe(true);
+    })
 })
