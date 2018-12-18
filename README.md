@@ -4,7 +4,7 @@
 
 Compares developers github accounts.
 
-![Screenshot]("./docs/screenshot.png")
+![Screenshot](./docs/screenshot.png)
 
 ## Getting Started
 
@@ -26,7 +26,7 @@ How to get the development environment running.
 
 - Cloning the project.
 
-  * while inside a desired directory, clone the github-battle repository using https://github.com/kisakyegordon/github-battle*
+  * while inside a desired directory, clone the github-battle repository using https://github.com/kisakyegordon/github-battle
 
 - Install Packages
 
