@@ -63,3 +63,17 @@ To locally run the tests
 
   - `HEROKU_APP_NAME` - used to specify the app name on Heroku to which our github battle application is deployed.
 
+## Setting Up Tests.
+- To setup testing locally i installed the libraries :
+  - Testing Framework - `Jest`.
+  - Browser Environment Simulator - `jsDOM`
+  - Assertion Library - `Enzyme`
+- When running tests, i set all these up before declaring the test case.
+
+
+## Deployment.
+- While in Heroku under the `deploy` tab, connect to the `github-battle` repository move to the  bottom of the page to deploy the  application.
+* `Continous Deployment` -  to enable this check the `Wait for CI to pass before deploy` to constantly deploy the application when the build passes.
+* Access the deployed  app [HERE](https://githubattle.herokuapp.com/)
+
+
